@@ -4,29 +4,16 @@ Created by Linqing Zhu, and Mei Zhu.
 
 ## 🚀 Mission statement
 
-Our application, Pokemon Zhu 2.0 is for everyone. It allows users to add their favorite pokemon and store into a like collection. 
+Our application, Pokemon Zhu 2.0 is for Pokemon enthusiasts. Users will be able to search for pokemons and add their favorite pokemon into a collection. 
 
 ## API & React Router
 
 This application will use the Pokemon API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
 
-- Link to API documentation: [Link goes here]
-- API endpoint #1
-  - Description of endpoint
-  - List of data values used by the endpoint
-- API endpoint #2
-  - Description of endpoint
-  - List of data values used by the endpoint
-- API endpoint #3
-  - Description of endpoint
-  - List of data values used by the endpoint
-
-[If your API requires an API key, say so here.]
-
-**Example:**
 - https://pokeapi.co/api/v2/pokemon/${pokemonName}
   - This endpoint provided us with an object. 
   - We used the `id`, `sprites.front_default`, and `name` from each object. 
+
 - https://pokeapi.co/api/v2/pokemon/${pokemonId}
   - This will fetch a pokemon data by id
   - I will use the `id`, `name`, `stats`, and `sprites.front_default`
@@ -39,26 +26,16 @@ This application will use the Pokemon API. Below are the documentation and speci
 
 The application will feature the following frontend routes and core features:
 
-* On the `/pokemon` page, users can search on pokemon and randomly generate pokemon.
-* On the `/{pokemonName}` page, users can see the details on each pokemon and click add to favorite that could add the pokemon to like collection.
-* On the `/favorite` page, users can see all the pokemon like collection.
-
-**Example:**
-- On the `/artworks` page, users can view a grid of all artwork
-- On the `/artworks` page, users can click on a piece of art in the grid, taking them to the details page for that piece of art.
-- On the `/artworks/:artworkId` page, users can view additional details for a single piece of art
-- On the `/` page, users can search for artwork titles related to a search term.
+* On the `/pokemon` page, users can search a for a pokemon or randomly generate pokemon.
+* On the `/{pokemonName}` page, users can see the details of each pokemon and click "add to favorite" that will add the pokemon to "favorites" collection.
+* On the `/favorite` page, users can see all the pokemons from the "favorites" collection.
 
 ## 🤔 Stretch User Stories
 
 If time permits, the following stretch features will be implemented in order of priority:
 
-* Users will be able to ... sort the pokemons by type. 
-* Users will be able to ... see the shiny versions of the pokemons in the pop up page.
-
-**Example:**
-* Users will be able to save and view favorited artworks using local storage
-* Users will be able to change the color scheme of the website from light mode to dark mode
+* Users will be able to ... sort pokemon by type. 
+* Users will be able to ... see the shiny versions of the pokemon in the pop up page.
 
 ## 📆 Timeline for reaching MVP in 1 week
 
