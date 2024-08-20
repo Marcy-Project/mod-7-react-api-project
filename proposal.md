@@ -1,14 +1,14 @@
-# [Project Name]
+# Pokemon Zhu 2.0
 
-Created by [team member], [team member], and [team member].
+Created by Linqing Zhu, and Mei Zhu.
 
 ## 🚀 Mission statement
 
-Our application, [app name] is for [target audience]. It allows users to [what it does and why audience would use it]
+Our application, Pokemon Zhu 2.0 is for everyone. It allows users to add their favorite pokemon and store into a like collection. 
 
 ## API & React Router
 
-This application will use the [name of API] API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
+This application will use the Pokemon API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
 
 - Link to API documentation: [Link goes here]
 - API endpoint #1
@@ -24,23 +24,24 @@ This application will use the [name of API] API. Below are the documentation and
 [If your API requires an API key, say so here.]
 
 **Example:**
-- https://api.artic.edu/api/v1/artworks
-  - This will fetch an array of artwork objects
-  - For each artwork, I want the `id`, `title`, and `image_id`
-- https://api.artic.edu/api/v1/artworks/{id}
-  - This will fetch a single artwork object
-  - I will use the `id`, `title`, `short_description`, `medium_display`, `place_of_origin` and `image_id`
-- https://api.artic.edu/api/v1/artworks/search?q={query}
-  - This will fetch a list of artworks that relate to the search query
-  - For each artwork, I will use the `id` and `title`
+- https://pokeapi.co/api/v2/pokemon/${pokemonName}
+  - This endpoint provided us with an object. 
+  - We used the `id`, `sprites.front_default`, and `name` from each object. 
+- https://pokeapi.co/api/v2/pokemon/${pokemonId}
+  - This will fetch a pokemon data by id
+  - I will use the `id`, `name`, `stats`, and `sprites.front_default`
+
+- http://localhost:4000/likeCollection
+  - This will fetch a list of pokemon that user added to favorite
+  - For each like collection, I will use the `id`, `name`, `stats`, and `sprites.front_default`
 
 ## 👩‍💻 MVP User Stories & Frontend Routes
 
 The application will feature the following frontend routes and core features:
 
-* On the `/example` page, users can...
-* On the `/example` page, users can...
-* On the `/example` page, users can...
+* On the `/pokemon` page, users can search on pokemon and randomly generate pokemon.
+* On the `/{pokemonName}` page, users can see the details on each pokemon and click add to favorite that could add the pokemon to like collection.
+* On the `/favorite` page, users can see all the pokemon like collection.
 
 **Example:**
 - On the `/artworks` page, users can view a grid of all artwork
