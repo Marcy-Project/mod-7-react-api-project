@@ -52,9 +52,8 @@ The application will feature the following frontend routes and core features:
 
 If time permits, the following stretch features will be implemented in order of priority:
 
-* Users will be able to...
-* Users will be able to...
-* Users will be able to...
+* Users will be able to ... sort the pokemons by type. 
+* Users will be able to ... see the shiny versions of the pokemons in the pop up page.
 
 **Example:**
 * Users will be able to save and view favorited artworks using local storage
@@ -65,29 +64,23 @@ If time permits, the following stretch features will be implemented in order of 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Finish Proposal 
+- [ ] Finish Scrum Board 
 
 **Day 2**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Refactor code from last project into React code 
+- [ ] useState and useEffect on search bar 
+- [ ] useContext to store variables 
 
 **Day 3** (MVP due by the end of the day)
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Create a database to store the Pokemons that are starred
+- [ ] Create the favorites feature (new page) 
 
 **Day 4**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Make the UI look better 
 
 **Day 5**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] TBD / Stretch Feature 
 
 ## Wireframes of each page in your application
 
