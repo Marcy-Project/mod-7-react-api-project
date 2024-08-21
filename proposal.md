@@ -4,29 +4,16 @@ Created by Linqing Zhu, and Mei Zhu.
 
 ## 🚀 Mission statement
 
-Our application, Pokemon Zhu 2.0 is for everyone. It allows users to add their favorite pokemon and store into a like collection. 
+Our application, Pokemon Zhu 2.0 is for Pokemon enthusiasts. Users will be able to search for pokemons and add their favorite pokemon into a collection. 
 
 ## API & React Router
 
 This application will use the Pokemon API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
 
-- Link to API documentation: [Link goes here]
-- API endpoint #1
-  - Description of endpoint
-  - List of data values used by the endpoint
-- API endpoint #2
-  - Description of endpoint
-  - List of data values used by the endpoint
-- API endpoint #3
-  - Description of endpoint
-  - List of data values used by the endpoint
-
-[If your API requires an API key, say so here.]
-
-**Example:**
 - https://pokeapi.co/api/v2/pokemon/${pokemonName}
   - This endpoint provided us with an object. 
   - We used the `id`, `sprites.front_default`, and `name` from each object. 
+
 - https://pokeapi.co/api/v2/pokemon/${pokemonId}
   - This will fetch a pokemon data by id
   - I will use the `id`, `name`, `stats`, and `sprites.front_default`
@@ -39,61 +26,45 @@ This application will use the Pokemon API. Below are the documentation and speci
 
 The application will feature the following frontend routes and core features:
 
-* On the `/pokemon` page, users can search on pokemon and randomly generate pokemon.
-* On the `/{pokemonName}` page, users can see the details on each pokemon and click add to favorite that could add the pokemon to like collection.
-* On the `/favorite` page, users can see all the pokemon like collection.
-
-**Example:**
-- On the `/artworks` page, users can view a grid of all artwork
-- On the `/artworks` page, users can click on a piece of art in the grid, taking them to the details page for that piece of art.
-- On the `/artworks/:artworkId` page, users can view additional details for a single piece of art
-- On the `/` page, users can search for artwork titles related to a search term.
+* On the `/pokemon` page, users can search a for a pokemon or randomly generate pokemon.
+* On the `/{pokemonName}` page, users can see the details of each pokemon and click "add to favorite" that will add the pokemon to "favorites" collection.
+* On the `/favorite` page, users can see all the pokemons from the "favorites" collection.
 
 ## 🤔 Stretch User Stories
 
 If time permits, the following stretch features will be implemented in order of priority:
 
-* Users will be able to...
-* Users will be able to...
-* Users will be able to...
-
-**Example:**
-* Users will be able to save and view favorited artworks using local storage
-* Users will be able to change the color scheme of the website from light mode to dark mode
+* Users will be able to ... sort pokemon by type. 
+* Users will be able to ... see the shiny versions of the pokemon in the pop up page.
 
 ## 📆 Timeline for reaching MVP in 1 week
 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Finish Proposal 
+- [ ] Finish Scrum Board 
 
 **Day 2**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Refactor code from last project into React code 
+- [ ] useState and useEffect on search bar 
+- [ ] useContext to store variables 
 
 **Day 3** (MVP due by the end of the day)
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Create a database to store the Pokemons that are starred
+- [ ] Create the favorites feature (new page) 
 
 **Day 4**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Make the UI look better 
 
 **Day 5**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] TBD / Stretch Feature 
 
 ## Wireframes of each page in your application
 
 Below, you can find wireframes for our project. Each wireframe shows a different page of our application as well as the key components of the application. Details such as specific text values or images are intentionally not included:
 
-[Wireframe for page 1]
+<img width="457" alt="Screenshot 2024-08-20 at 5 08 46 PM" src="https://github.com/user-attachments/assets/ed8c903c-000f-4796-af03-25ad4c992c35">
 
-[Wireframe for page 2]
+<img width="528" alt="Screenshot 2024-08-20 at 5 07 56 PM" src="https://github.com/user-attachments/assets/e6ef7c41-e2ca-4b9a-b499-2ec7d301ac6d">
+
