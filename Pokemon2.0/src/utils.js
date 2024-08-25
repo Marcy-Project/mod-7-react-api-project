@@ -1,21 +1,3 @@
-export const handleFetch = async (url, options = {}) => {
-  try {
-    const response = await fetch(url, options);
-    const { ok, status, statusText, headers } = response;
-    console.log('response:', { ok, status, statusText, headers });
-    if (!ok) throw new Error(`Fetch failed with status - ${status}, ${statusText}`);
-
-    const isJson = (headers.get('content-type') || '').includes('application/json');
-    const responseData = await (isJson ? response.json() : response.text());
-
-    return [responseData, null];
-  } catch (error) {
-    console.warn(error)
-    return [null, error];
-  }
-};
-
-
 export const getRandomPokemon = (numberOfPokemon) => {
   const maxCount = 1025;
   if (numberOfPokemon > maxCount) {
@@ -28,12 +10,8 @@ export const getRandomPokemon = (numberOfPokemon) => {
   return pokemonList;
 };
 
-export const fetchAndRenderPokemonList = async (url, setPokemonList, randomList) => {
-  const response = await getPokemonDataList(url, randomList);
-  setPokemonList(response);
-};
-
-export const getPokemonDataList = async (url, pokemonList) => {
+export const fetchAndRenderPokemonList = async (pokemonList) => {
+  const url = "https://pokeapi.co/api/v2/pokemon/";
   const pokemonData = [];
   for (let pokemonId of pokemonList) {
     try {
