@@ -16,7 +16,6 @@ const SearchForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Find a Pokemon</h2>
       <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       <button type="submit">Submit</button>
     </form>
