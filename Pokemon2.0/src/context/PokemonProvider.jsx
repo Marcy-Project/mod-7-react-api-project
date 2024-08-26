@@ -16,6 +16,7 @@ export const PokemonProvider = ({ children }) => {
       setPokemonList(pokemonData);
     };
     initializePokemon();
+    fetchSavedPokemon();
   }, []);
 
   const randomizePokemon = async () => {
@@ -39,8 +40,9 @@ export const PokemonProvider = ({ children }) => {
       }
 
       const result = await response.json();
-      console.log('Pokemon saved:', result);
+      // console.log('Pokemon saved:', result);
       setSavedPokemon((prev) => [...prev, result]);
+      await fetchSavedPokemon();
     } catch (error) {
       console.error('Error saving Pokémon:', error);
     }
@@ -57,6 +59,7 @@ export const PokemonProvider = ({ children }) => {
     } catch (error) {
       console.error('Error fetching saved Pokémon:', error);
     }
+    
   };
 
   return (
