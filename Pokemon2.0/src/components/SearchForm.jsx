@@ -12,14 +12,16 @@ const SearchForm = () => {
     setPokemonList(response ? [response] : []);
   };
 
-
-
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+    <form onSubmit={handleSubmit} className="form-container">
+      <input 
+        type="text" 
+        value={searchTerm} 
+        onChange={(e) => setSearchTerm(e.target.value)} 
+        placeholder="Enter Pokémon Name or ID"
+      />
       <button type="submit">Submit</button>
     </form>
-    
   );
 };
 
