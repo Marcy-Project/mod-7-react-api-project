@@ -6,9 +6,9 @@ const RandomPokemon = () => {
   const { randomizePokemon } = useContext(PokemonContext);
 
   return (
-      <div>
-          <button className="ui button fluid" onClick={randomizePokemon}>
-            Randomize Pokemon
+      <div className="form-container">
+          <button onClick={randomizePokemon}>
+            Randomize Pokémon
           </button>
           <PokemonList />
       </div>

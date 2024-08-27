@@ -14,14 +14,16 @@ const PokemonList = () => {
   };
 
   return (
-    <ul id="pokemon-list">
-      {pokemonList.map(pokemon => (
-        // console.log(pokemon),
-        <li key={pokemon.id} onClick={() => handleCardClick(pokemon)}>
-          <PokemonCard pokemon={pokemon} />
-        </li>
-      ))}
-    </ul>
+    <div id="pokemon-list-container">
+      <ul id="pokemon-list">
+        {pokemonList.map(pokemon => (
+          console.log(pokemon),
+          <li key={pokemon.id} onClick={() => handleCardClick(pokemon)}>
+            <PokemonCard pokemon={pokemon} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

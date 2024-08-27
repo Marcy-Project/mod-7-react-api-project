@@ -22,13 +22,14 @@ const PokemonDetailPage = () => {
       <div id="pokemon-details">
         <h1>Pokemon Detail</h1>
         <img src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
-        <p>Base Stats:</p>
-        <p>HP: {pokemonDetails.stats[0].base_stat}</p>
-        <p>Attack: {pokemonDetails.stats[1].base_stat}</p>
-        <p>Defense: {pokemonDetails.stats[2].base_stat}</p>
-        <p>Special Attack: {pokemonDetails.stats[3].base_stat}</p>
-        <p>Special Defense: {pokemonDetails.stats[4].base_stat}</p>
-        <p>Speed: {pokemonDetails.stats[5].base_stat}</p>
+        <div className="stats-grid">
+          <div className="stat-item"><strong>HP:</strong> {pokemonDetails.stats[0].base_stat}</div>
+          <div className="stat-item"><strong>Attack:</strong> {pokemonDetails.stats[1].base_stat}</div>
+          <div className="stat-item"><strong>Defense:</strong> {pokemonDetails.stats[2].base_stat}</div>
+          <div className="stat-item"><strong>Special Attack:</strong> {pokemonDetails.stats[3].base_stat}</div>
+          <div className="stat-item"><strong>Special Defense:</strong> {pokemonDetails.stats[4].base_stat}</div>
+          <div className="stat-item"><strong>Speed:</strong> {pokemonDetails.stats[5].base_stat}</div>
+        </div>
       </div>
       <div className="button-container">
         <GoHomeButton />
