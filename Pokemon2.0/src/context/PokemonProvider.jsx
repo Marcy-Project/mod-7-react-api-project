@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { PokemonContext } from './PokemonContext';
+import { PokemonContext } from './PokemonContext'; // Ensure the import is correct
 import { getRandomPokemon, fetchAndRenderPokemonList } from '../utils';
 
 export const PokemonProvider = ({ children }) => {
@@ -7,26 +7,34 @@ export const PokemonProvider = ({ children }) => {
   const [randomList, setRandomList] = useState([]);
   const [pokemonDetails, setPokemonDetails] = useState(null);
   const [savedPokemon, setSavedPokemon] = useState([]);
+  const [filteredPokemon, setFilteredPokemon] = useState([]);
 
   useEffect(() => {
     const initializePokemon = async () => {
+      try {
+        const randomList = getRandomPokemon(20);
+        setRandomList(randomList);
+        const pokemonData = await fetchAndRenderPokemonList(randomList);
+        setPokemonList(pokemonData);
+      } catch (error) {
+        console.error('Error initializing Pokemon:', error);
+      }
+    };
+    initializePokemon();
+    fetchSavedPokemon(); // Fetch saved Pokémon after initialization
+  }, []);
+
+  const randomizePokemon = async () => {
+    try {
       const randomList = getRandomPokemon(20);
       setRandomList(randomList);
       const pokemonData = await fetchAndRenderPokemonList(randomList);
       setPokemonList(pokemonData);
-    };
-    initializePokemon();
-    fetchSavedPokemon();
-  }, []);
-
-  const randomizePokemon = async () => {
-    const randomList = getRandomPokemon(20);
-    setRandomList(randomList);
-    const pokemonData = await fetchAndRenderPokemonList(randomList);
-    setPokemonList(pokemonData);
+    } catch (error) {
+      console.error('Error randomizing Pokemon:', error);
+    }
   };
 
-  // move into save button ? 
   const savePokemon = async (pokemon) => {
     try {
       const response = await fetch('http://localhost:4000/pokemon', {
@@ -40,9 +48,8 @@ export const PokemonProvider = ({ children }) => {
       }
 
       const result = await response.json();
-      // console.log('Pokemon saved:', result);
       setSavedPokemon((prev) => [...prev, result]);
-      await fetchSavedPokemon();
+      await fetchSavedPokemon(); // Refresh saved Pokémon list
     } catch (error) {
       console.error('Error saving Pokémon:', error);
     }
@@ -55,11 +62,12 @@ export const PokemonProvider = ({ children }) => {
         throw new Error('Network response was not ok');
       }
       const result = await response.json();
+      console.log('Fetched saved Pokemon:', result); // Debugging
       setSavedPokemon(result);
+      setFilteredPokemon(result);
     } catch (error) {
       console.error('Error fetching saved Pokémon:', error);
     }
-    
   };
 
   return (
@@ -75,6 +83,8 @@ export const PokemonProvider = ({ children }) => {
         savedPokemon,
         savePokemon,
         fetchSavedPokemon,
+        filteredPokemon,
+        setFilteredPokemon,
       }}
     >
       {children}

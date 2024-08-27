@@ -1,22 +1,30 @@
-// src/pages/SavedPage.js
 import { useContext, useEffect } from 'react';
-import { PokemonContext } from '../context/PokemonContext';
+import { PokemonContext } from '../context/PokemonContext'; 
 import SavedPokemonCard from '../components/SavedPokemonCard';
+import Filter from '../components/Filter';
 
 const SavedPage = () => {
-  const { savedPokemon, fetchSavedPokemon } = useContext(PokemonContext);
+  const { filteredPokemon, fetchSavedPokemon } = useContext(PokemonContext);
 
   useEffect(() => {
-    fetchSavedPokemon();
-  }, [fetchSavedPokemon]);
+    fetchSavedPokemon(); 
+  }, []);
 
   return (
     <div>
-      <h1>Saved Pokémon</h1>
-      <div className="ui cards">
-        {savedPokemon.map(pokemon => (
-          <SavedPokemonCard key={pokemon.id} pokemon={pokemon} />
-        ))}
+      <Filter />
+      <div id="pokemon-list-container">
+        <ul id="pokemon-list" className="ui cards">
+          {filteredPokemon.length ? (
+            filteredPokemon.map(pokemon => (
+              <li key={pokemon.id}>
+                <SavedPokemonCard pokemon={pokemon} />
+              </li>
+            ))
+          ) : (
+            <p className="no-pokemon-message">No Pokémon saved or matched the filter.</p>
+          )}
+        </ul>
       </div>
     </div>
   );

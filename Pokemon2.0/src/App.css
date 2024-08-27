@@ -228,11 +228,14 @@ button:hover {
   margin-top: 10px; 
 }
 
-
-
-
-
-
-
-
+/* saved page */
+.no-pokemon-message {
+  grid-column: span 5; 
+  text-align: center;
+  font-size: 1.2em;
+  color: #333;
+  position: absolute; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
 
