@@ -6,14 +6,14 @@ import SaveButton from '../components/SaveButton';
 
 const PokemonDetailPage = () => {
   const { id } = useParams();
-  const { pokemonList, setPokemonDetails, pokemonDetails, savedPokemon } = useContext(PokemonContext);
+  const { pokemonList, setPokemonDetails, pokemonDetails } = useContext(PokemonContext);
 
   useEffect(() => {
     // console.log(id, typeof id)
     // console.log("pokemon", pokemonList)
-    const pokemon = pokemonList.find(p => p.id == id) || savedPokemon.find(p => p.id == id);
+    const pokemon = pokemonList.find(p => p.id === parseInt(id));
     setPokemonDetails(pokemon);
-  }, [id, pokemonList, savedPokemon, setPokemonDetails]);
+  }, [id, pokemonList, setPokemonDetails]);
 
   return (
     <div>
