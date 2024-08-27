@@ -1,4 +1,5 @@
 import "./App.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Route, Routes, Link } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import NotFoundPage from './pages/NotFoundPage';

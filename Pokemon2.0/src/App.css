@@ -74,3 +74,102 @@ nav ul li a:hover {
   color: #007bff; 
 }
 
+/* form/buttons */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* pokemonList */
+#pokemon-list-container {
+  display: flex;
+  justify-content: center; /* Center the list horizontally */
+}
+
+#pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 1500px; 
+}
+
+#pokemon-list li {
+  flex: 1 1 calc(20% - 20px); 
+  margin: 10px; 
+}
+
+/* card */
+.ui.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+  padding: 20px; 
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; 
+}
+
+.ui.card:hover {
+  transform: scale(1.05); 
+}
+
+.ui.card .image img {
+  max-width: 100%; 
+  height: auto;
+}
+
+.ui.card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-top: 10px;
+}
+
+.ui.card .extra.content {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 10px;
+}
+
+.ui.card .extra.content span {
+  display: flex;
+  align-items: center; 
+  gap: 5px;
+}
+
+.ui.card .extra.content i {
+  font-size: 1.2em; 
+}
+
+
