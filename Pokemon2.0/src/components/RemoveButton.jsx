@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { PokemonContext } from '../context/PokemonContext';
 
 const RemoveButton = ({ pokemon }) => {
-  const { setSavedPokemon } = useContext(PokemonContext);
+  const { fetchSavedPokemon } = useContext(PokemonContext);
 
   const handleRemove = async () => {
     try {
@@ -13,8 +13,9 @@ const RemoveButton = ({ pokemon }) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-
-      setSavedPokemon(prev => prev.filter(p => p.id !== pokemon.id));
+      console.log('Pokemon removed:', pokemon.id);
+      // setSavedPokemon(prev => prev.filter(p => p.id !== pokemon.id));
+      fetchSavedPokemon();
     } catch (error) {
       console.error('Error removing Pokémon:', error);
     }

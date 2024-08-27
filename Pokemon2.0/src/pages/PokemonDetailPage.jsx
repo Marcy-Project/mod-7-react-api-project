@@ -21,7 +21,6 @@ const PokemonDetailPage = () => {
     <div>
       <div id="pokemon-details">
         <h1>Pokemon Detail</h1>
-        <h2>{pokemonDetails.name}</h2>
         <img src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
         <div className="stats-grid">
           <div className="stat-item"><strong>HP:</strong> {pokemonDetails.stats[0].base_stat}</div>
