@@ -67,4 +67,10 @@ Below, you can find wireframes for our project. Each wireframe shows a different
 <img width="457" alt="Screenshot 2024-08-20 at 5 08 46 PM" src="https://github.com/user-attachments/assets/ed8c903c-000f-4796-af03-25ad4c992c35">
 
 <img width="528" alt="Screenshot 2024-08-20 at 5 07 56 PM" src="https://github.com/user-attachments/assets/e6ef7c41-e2ca-4b9a-b499-2ec7d301ac6d">
+![image](https://github.com/user-attachments/assets/97d1380c-3921-47ef-80d2-cf4658bd500e)
+
+![image](https://github.com/user-attachments/assets/939bdc79-745a-47da-b415-0c6c8eb39725)
+![image](https://github.com/user-attachments/assets/f07efce2-8574-4e0f-a911-5fa7cff70810)
+
+
 
