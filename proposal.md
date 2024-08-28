@@ -42,23 +42,23 @@ If time permits, the following stretch features will be implemented in order of 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
-- [ ] Finish Proposal 
-- [ ] Finish Scrum Board 
+- [X] Finish Proposal 
+- [X] Finish Scrum Board 
 
 **Day 2**
-- [ ] Refactor code from last project into React code 
-- [ ] useState and useEffect on search bar 
-- [ ] useContext to store variables 
+- [X] Refactor code from last project into React code 
+- [X] useState and useEffect on search bar 
+- [X] useContext to store variables 
 
 **Day 3** (MVP due by the end of the day)
-- [ ] Create a database to store the Pokemons that are starred
-- [ ] Create the favorites feature (new page) 
+- [X] Create a database to store the Pokemons that are starred
+- [X] Create the favorites feature (new page) 
 
 **Day 4**
-- [ ] Make the UI look better 
+- [X] Make the UI look better 
 
 **Day 5**
-- [ ] TBD / Stretch Feature 
+- [X] Debug and fix details 
 
 ## Wireframes of each page in your application
 
