@@ -11,3 +11,7 @@ As a group, answer the questions below. For each of these questions, consider sp
 **Write your reflection using markdown**.
 
 ## Reflection Response
+- **Scrum board** is helpful to backup all out process and what are the features we want to develop. It is good to assign task and keep track.
+- The timeline is keep us on track to finish the MVP, where we make the expectation and push the progress.
+- I think we should know each other's routine first see each person's working time and working style. I would also know each person's strength and weakness before we start the project.
+- We got so much trouble when debugging, what we did well is when one person couldn't resolve the code, we assign the tough bug to who is good at to resolve that code.
