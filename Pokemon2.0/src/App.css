@@ -189,6 +189,10 @@ button:hover {
   padding: 20px;
 }
 
+.pokemon-name:first-letter {
+  text-transform: uppercase;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
