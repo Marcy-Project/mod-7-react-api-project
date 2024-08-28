@@ -1,19 +1,21 @@
 import { useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { PokemonContext } from '../context/PokemonContext';
-import GoHomeButton from '../components/GoHomeButton';
-import SaveButton from '../components/SaveButton'; 
-
-const PokemonDetailPage = () => {
+import RemoveButton from '../components/RemoveButton';
+import { useNavigate } from 'react-router-dom';
+const SavedPokemonDetailPage = () => {
   const { id } = useParams();
-  const { pokemonList, setPokemonDetails, pokemonDetails } = useContext(PokemonContext);
+  const navigate = useNavigate();
+  const {setPokemonDetails, pokemonDetails, savedPokemon } = useContext(PokemonContext);
 
   useEffect(() => {
-    // console.log(id, typeof id)
-    // console.log("pokemon", pokemonList)
-    const pokemon = pokemonList.find(p => p.id === parseInt(id));
+    const pokemon = savedPokemon.find(p => p.id == id);
     setPokemonDetails(pokemon);
-  }, [id, pokemonList, setPokemonDetails]);
+  }, [id, savedPokemon, setPokemonDetails]);
+
+  if (!pokemonDetails) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
@@ -30,11 +32,13 @@ const PokemonDetailPage = () => {
         </div>
       </div>
       <div className="button-container">
-        <GoHomeButton />
-        <SaveButton pokemon={pokemonDetails} /> 
+        <button className="ui button fluid" onClick={() => navigate('/saved')}>
+        Go Home
+        </button>
+        <RemoveButton pokemon={pokemonDetails} /> 
       </div>
     </div>
   );
 };
 
-export default PokemonDetailPage;
+export default SavedPokemonDetailPage;

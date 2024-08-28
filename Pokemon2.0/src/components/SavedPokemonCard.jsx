@@ -1,16 +1,15 @@
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import RemoveButton from "./RemoveButton";
 
 const SavedPokemonCard = ({ pokemon }) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const handleClick = () => {
-  //   navigate(`/pokemon/${pokemon.id}`);
-  // };
+  const handleClick = () => {
+    navigate(`/saved/${pokemon.id}`);
+  };
 
   return (
-    // <div className="ui card" onClick={handleClick}>
-    <div className="ui card">
+    <div className="ui card" onClick={handleClick}>
       <div className="image">
         <img alt={pokemon.name} src={pokemon.sprites.front_default} />
       </div>

@@ -6,7 +6,7 @@ const SaveButton = ({ pokemon }) => {
   const [message, setMessage] = useState('');
 
   const isPokemonInDatabase = (pokemon) => {
-    return savedPokemon.some(p => p.id === pokemon.id);
+    return savedPokemon.some(p => p.id.toString() === pokemon.id.toString());
   };
 
   const handleSave = async () => {
@@ -16,7 +16,9 @@ const SaveButton = ({ pokemon }) => {
     }
 
     try {
-      await savePokemon(pokemon);
+      // Convert the pokemon ID to a string before saving
+      const pokemonToSave = { ...pokemon, id: pokemon.id.toString() };
+      await savePokemon(pokemonToSave);
       await fetchSavedPokemon();
       setMessage('Pokémon saved!');
     } catch (error) {

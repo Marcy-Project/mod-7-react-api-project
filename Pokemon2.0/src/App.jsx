@@ -6,6 +6,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import HomePage from './pages/HomePage';
 import PokemonDetailPage from './pages/PokemonDetailPage';
 import SavedPokemonPage from "./pages/SavedPokemonPage";
+import SavedPokemonDetailPage from './pages/savedPokemonDetailPage';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/pokemon/:id" element={<PokemonDetailPage />} />
         <Route path="/saved" element={<SavedPokemonPage />} />
+        <Route path="/saved/:id" element={<SavedPokemonDetailPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
