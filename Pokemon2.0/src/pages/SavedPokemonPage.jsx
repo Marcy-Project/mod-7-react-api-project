@@ -13,7 +13,6 @@ const SavedPage = () => {
 
   return (
     <div>
-      // changes made to make filter and ui/css work 
       <Filter />
       <div id="pokemon-list-container">
         <ul id="pokemon-list" className="ui cards">
@@ -28,18 +27,6 @@ const SavedPage = () => {
           )}
         </ul>
       </div>
-      // see what to keep from this part 
-      {savedPokemon.length === 0 ? (
-        <div>
-          <p>There are no Pokémon saved. <Link to="/">Go to home</Link></p>
-        </div>
-      ) : (
-        <div className="ui cards">
-            {savedPokemon.map(pokemon => (
-                <SavedPokemonCard key={pokemon.id} pokemon={pokemon} />
-            ))}
-        </div>
-      )}
     </div>
   );
 };

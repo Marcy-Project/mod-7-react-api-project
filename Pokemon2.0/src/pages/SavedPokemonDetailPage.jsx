@@ -33,7 +33,7 @@ const SavedPokemonDetailPage = () => {
       </div>
       <div className="button-container">
         <button className="ui button fluid" onClick={() => navigate('/saved')}>
-        Go Home
+        Return to Saved
         </button>
         <RemoveButton pokemon={pokemonDetails} /> 
       </div>
