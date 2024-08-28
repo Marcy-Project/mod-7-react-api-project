@@ -207,11 +207,35 @@ button:hover {
 .button-container {
   display: flex;
   justify-content: center; 
-  gap: 20px; 
-  padding-left: 30px;
+  gap: 20px;
 }
 
+.ui.button {
+  width: 160px; 
+  height: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
 
+.message-container {
+  height: 50px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; 
+}
 
-
+/* saved page */
+.no-pokemon-message {
+  grid-column: span 5; 
+  text-align: center;
+  font-size: 1.2em;
+  color: #333;
+  position: absolute; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
 

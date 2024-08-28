@@ -11,7 +11,7 @@ const SaveButton = ({ pokemon }) => {
 
   const handleSave = async () => {
     if (isPokemonInDatabase(pokemon)) {
-      setMessage('Pokémon already saved in the database');
+      setMessage('Pokémon already saved.');
       return;
     }
 
@@ -20,7 +20,7 @@ const SaveButton = ({ pokemon }) => {
       const pokemonToSave = { ...pokemon, id: pokemon.id.toString() };
       await savePokemon(pokemonToSave);
       await fetchSavedPokemon();
-      setMessage('Pokémon saved successfully');
+      setMessage('Pokémon saved!');
     } catch (error) {
       console.error('Error saving Pokémon:', error);
       setMessage('Error saving Pokémon');
@@ -29,10 +29,10 @@ const SaveButton = ({ pokemon }) => {
 
   return (
     <div>
-      <button className="ui button" onClick={handleSave}>
+     <button className="ui button" onClick={handleSave}>
         Save Pokémon
       </button>
-      {message && <p>{message}</p>}
+      {message && <div className="message-container"><p>{message}</p></div>}
     </div>
   );
 };

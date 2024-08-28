@@ -21,15 +21,15 @@ const SavedPokemonCard = ({ pokemon }) => {
       </div>
       <div className="extra content">
         <span>
-          <i className="icon heartbeat red" />
+          <i className="fas fa-heartbeat red" />
           {pokemon.stats[0].base_stat}
         </span>
         <span>
-          <i className="icon lightning" />
+          <i className="fas fa-bolt" />
           {pokemon.stats[1].base_stat}
         </span>
         <span>
-          <i className="icon shield" />
+          <i className="fas fa-shield-alt" />
           {pokemon.stats[2].base_stat}
         </span>
       </div>
