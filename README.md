@@ -200,6 +200,6 @@ See the [Agile Methodology Reflection document](./agile-methodology-reflection.m
 ### README
 
 - [X] Includes a README.md file
-- [ ] The README file describes the purpose and audience for the application
-- [ ] The README file describes the user stories 
-- [ ] The README file include screenshots of the final project
+- [X] The README file describes the purpose and audience for the application
+- [X] The README file describes the user stories 
+- [X] The README file include screenshots of the final project
